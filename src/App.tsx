@@ -1,6 +1,7 @@
 import MyIcon from "./../public/temp.svg";
+import Contact from "./components/contact/Contact.component";
 import Home from "./components/Home/Home.component";
-import TimeLine from "./components/TimeLine.component";
+import TimeLine from "./components/TimeLineView.component.tsx/TimeLineView.component";
 import { BackgroundBeams } from "./components/ui/BackgroundBeams";
 import { SparklesText } from "./components/ui/SparkleText";
 
@@ -28,7 +29,12 @@ const App = () => {
       <section className="">
         <Home />
       </section>
-      <TimeLine />
+      <section>
+        <TimeLine />
+      </section>
+      <section>
+        <Contact />
+      </section>
     </div>
   );
 };
