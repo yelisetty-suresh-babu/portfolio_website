@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import MyIcon from "./../public/temp.svg";
+import mainLogo from "./assets/mainLogo.svg";
 import Contact from "./components/contact/Contact.component";
 import Home from "./components/Home/Home.component";
 import TimeLine from "./components/TimeLineView.component.tsx/TimeLineView.component";
@@ -50,7 +50,9 @@ const App = () => {
       {/* nav bar */}
       <header className="h-fit sticky top-0   w-screen flex justify-between items-center px-20 py-2  z-10 backdrop-blur-xs">
         <SparklesText sparklesCount={4}>
-          <img src={MyIcon} alt="logo" height={80} width={80} />
+          <a href="#home">
+            <img src={mainLogo} alt="logo" height={80} width={80} />
+          </a>
         </SparklesText>
         <div className="text-white flex items-center gap-x-4 text-2xl">
           {sections.map((section) => (

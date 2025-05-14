@@ -1,5 +1,5 @@
 import SignupForm from "./ContactForm.component";
-import animation from "./../../../public/singingContract.json";
+import animation from "./../../assets/singingContract.json";
 import Lottie from "lottie-react";
 
 const Contact = () => {
