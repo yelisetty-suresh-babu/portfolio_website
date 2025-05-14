@@ -1,6 +1,6 @@
 "use client";
 
-import { CardBody, CardContainer, CardItem } from "./ui/3DCard";
+import { CardBody, CardContainer, CardItem } from "../ui/3DCard";
 
 const ProfilePic = () => {
   return (

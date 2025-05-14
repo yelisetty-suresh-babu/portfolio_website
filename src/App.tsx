@@ -1,10 +1,8 @@
 import MyIcon from "./../public/temp.svg";
-import Home from "./components/Home.component";
+import Home from "./components/Home/Home.component";
 import TimeLine from "./components/TimeLine.component";
 import { BackgroundBeams } from "./components/ui/BackgroundBeams";
-
-// import { BackgroundBeamsWithCollision } from "./components/ui/BackgroundBeamsWithCollision";
-// import { BackgroundLines } from "./components/ui/BackgroundLines";
+import { SparklesText } from "./components/ui/SparkleText";
 
 const App = () => {
   return (
@@ -12,7 +10,9 @@ const App = () => {
       <BackgroundBeams className="fixed top-0 left-0 w-full h-full "></BackgroundBeams>
       {/* nav bar */}
       <header className="h-fit  w-screen flex justify-between items-center px-20 py-4 z-10">
-        <img src={MyIcon} alt="logo" height={80} width={80} />
+        <SparklesText sparklesCount={5}>
+          <img src={MyIcon} alt="logo" height={80} width={80} />
+        </SparklesText>
         <div className="text-white flex items-center gap-x-4 text-2xl">
           <button className="cursor-pointer underline underline-offset-8 ">
             Home
