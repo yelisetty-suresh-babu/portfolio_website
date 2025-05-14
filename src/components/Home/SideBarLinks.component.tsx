@@ -4,22 +4,22 @@ const sideBarData = [
   {
     title: "Linkedin",
     link: "https://www.linkedin.com/in/yelisetty-suresh-333759221/",
-    imgLink: "./../../public/linkedin.svg",
+    imgLink: "./linkedin.svg",
   },
   {
     title: "Github",
     link: "https://github.com/yelisetty-suresh-babu",
-    imgLink: "./../../public/github.svg",
+    imgLink: "./github.svg",
   },
   {
     title: "Email",
     link: "mailto:yelisettysuresh2@gmail.com",
-    imgLink: "./../../public/email.svg",
+    imgLink: "./email.svg",
   },
   {
     title: "Resume",
     link: "https://drive.google.com/file/d/1ujGKiIMKzFFz1g3GprbYqqk49m6c2b9S/view?usp=sharing",
-    imgLink: "./../../public/link.svg",
+    imgLink: "./link.svg",
   },
 ];
 
