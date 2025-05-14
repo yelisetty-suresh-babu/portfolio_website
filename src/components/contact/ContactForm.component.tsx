@@ -36,7 +36,7 @@ export function SignupForm() {
         onSubmit={handleSubmit}
         name="contactMe"
         data-netlify={true}
-        netlify
+        // netlify
       >
         <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
           <LabelInputContainer>
