@@ -35,6 +35,13 @@ const slugs = [
   "gitlab",
   "visualstudiocode",
   "figma",
+  "solidity",
+  "redis",
+  "redux",
+  "reactrouter",
+  "tailwindcss",
+  "babel",
+  "jsx",
 ];
 
 const images = slugs.map(

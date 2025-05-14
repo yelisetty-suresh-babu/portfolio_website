@@ -1,38 +1,82 @@
+import { useEffect, useState } from "react";
 import MyIcon from "./../public/temp.svg";
 import Contact from "./components/contact/Contact.component";
 import Home from "./components/Home/Home.component";
 import TimeLine from "./components/TimeLineView.component.tsx/TimeLineView.component";
 import { BackgroundBeams } from "./components/ui/BackgroundBeams";
 import { SparklesText } from "./components/ui/SparkleText";
+import useWindowSize from "./hooks/useWindowSize";
+
+const sections = ["home", "timeline", "contact"];
 
 const App = () => {
+  const [, height] = useWindowSize();
+  const [activeSection, setActiveSection] = useState("home");
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -60% 0px", // important for early detection
+      }
+    );
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      sections.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) observer.unobserve(el);
+      });
+    };
+  }, []);
   return (
-    <div className=" bg-[#111] flex flex-col  overflow-y-scroll items-center  ">
-      <BackgroundBeams className="fixed top-0 left-0 w-full h-full "></BackgroundBeams>
+    <div
+      className=" bg-[#111] flex flex-col  overflow-y-scroll items-center  "
+      style={{
+        height: height,
+      }}
+    >
+      <BackgroundBeams className="pointer-events-none fixed top-0 left-0 w-full h-full "></BackgroundBeams>
       {/* nav bar */}
-      <header className="h-fit  w-screen flex justify-between items-center px-20 py-4 z-10">
-        <SparklesText sparklesCount={5}>
+      <header className="h-fit sticky top-0   w-screen flex justify-between items-center px-20 py-2  z-10 backdrop-blur-xs">
+        <SparklesText sparklesCount={4}>
           <img src={MyIcon} alt="logo" height={80} width={80} />
         </SparklesText>
         <div className="text-white flex items-center gap-x-4 text-2xl">
-          <button className="cursor-pointer underline underline-offset-8 ">
-            Home
-          </button>
-          <button className="cursor-pointer ">Work</button>
-          <button className="cursor-pointer ">Projects</button>
-          <button className="cursor-pointer ">Education</button>
-          <button className="cursor-pointer ">Contact</button>
+          {sections.map((section) => (
+            <a
+              key={section}
+              href={`#${section}`}
+              className={`cursor-pointer ${
+                activeSection === section
+                  ? "underline underline-offset-8"
+                  : "hover:underline hover:underline-offset-4"
+              }`}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </a>
+          ))}
         </div>
       </header>
 
       {/* home */}
-      <section className="">
+      <section id="home" className="scroll-mt-5">
         <Home />
       </section>
-      <section>
+      <section id="timeline" className="scroll-mt-5">
         <TimeLine />
       </section>
-      <section>
+      <section id="contact" className="scroll-mt-5">
         <Contact />
       </section>
     </div>

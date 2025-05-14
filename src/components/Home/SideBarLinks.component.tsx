@@ -46,7 +46,7 @@ const SideBarButton = ({ title, link, imgLink }: SideBarButtonProps) => {
 
 const SideBarLinks = () => {
   return (
-    <div className="absolute right-0 pr-10 gap-y-10 flex flex-col">
+    <div className="absolute right-0 pr-6 gap-y-10 flex flex-col">
       {sideBarData.map((data) => {
         return (
           <SideBarButton
