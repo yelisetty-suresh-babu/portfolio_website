@@ -186,7 +186,7 @@ export function TimelineView() {
       ),
     },
     {
-      title: "2024 to Now",
+      title: "2024 (Aug) to Now",
       content: (
         <div>
           <p className=" text-2xl font-extrabold text-white mb-4">
