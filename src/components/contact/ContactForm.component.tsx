@@ -31,7 +31,12 @@ export function SignupForm() {
         I will get back to you
       </p>
 
-      <form className="my-8" onSubmit={handleSubmit}>
+      <form
+        className="my-8"
+        onSubmit={handleSubmit}
+        name="contactMe"
+        data-netlify={true}
+      >
         <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
           <LabelInputContainer>
             <Label htmlFor="name">Name</Label>
