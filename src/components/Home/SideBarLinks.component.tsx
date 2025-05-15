@@ -18,7 +18,7 @@ const sideBarData = [
   },
   {
     title: "Resume",
-    link: "https://drive.google.com/file/d/1ujGKiIMKzFFz1g3GprbYqqk49m6c2b9S/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1TAQAY8yhdDOFFcbrDamK_z8xvjHcZEp3/view?usp=sharing",
     imgLink: "./link.svg",
   },
 ];
