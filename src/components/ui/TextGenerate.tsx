@@ -34,7 +34,7 @@ export const TextGenerateEffect = ({
 
   const renderWords = () => {
     return (
-      <motion.div ref={scope}>
+      <motion.div ref={scope} className="text-nowrap ">
         {wordsArray.map((word, idx) => {
           return (
             <motion.span

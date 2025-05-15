@@ -72,7 +72,7 @@ const App = () => {
       </header>
 
       {/* home */}
-      <section id="home" className="scroll-mt-5">
+      <section id="home" className="scroll-mt-6">
         <Home />
       </section>
       <section id="timeline" className="scroll-mt-5">

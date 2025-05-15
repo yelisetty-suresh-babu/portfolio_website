@@ -18,7 +18,7 @@ const Contact = () => {
         {/* Radial Gradient to prevent sharp edges */}
         <div className="absolute inset-0 w-full h-full bg-transparent [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
       </div>
-      <div className="flex items-center gap-x-10 w-full">
+      <div className=" flex flex-col lg:flex-row items-center gap-x-10 w-full">
         <Lottie animationData={animation} style={{ height: 600 }} loop={true} />
         <SignupForm />
       </div>

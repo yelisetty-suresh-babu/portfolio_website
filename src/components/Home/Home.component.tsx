@@ -66,19 +66,19 @@ const Home = () => {
       }}
     >
       <div
-        className="text-white flex  items-center   px-40 gap-x-24"
+        className="text-white flex flex-col mb-20 lg:mb-0 lg:flex-row  items-center   px-40 gap-x-24  "
         style={{
           height: height - 112,
           width: width,
         }}
       >
-        <div className="flex flex-col items-start gap-y-6">
+        <div className="flex flex-col items-center  lg:items-start gap-y-6">
           <AboutMeModal open={open} setOpen={setOpen} />
 
           <div className="relative">
             <ConfettiButton>
               <TextGenerateEffect
-                className=" font-white"
+                className="  font-white"
                 words="Yelisetty Suresh"
                 size="text-6xl"
                 duration={1}

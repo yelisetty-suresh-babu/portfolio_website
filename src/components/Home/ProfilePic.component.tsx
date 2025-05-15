@@ -4,8 +4,8 @@ import { CardBody, CardContainer, CardItem } from "../ui/3DCard";
 
 const ProfilePic = () => {
   return (
-    <CardContainer className="inter-var">
-      <CardBody className="group relative w-auto rounded-xl p-6 flex justify-center items-center">
+    <CardContainer className="">
+      <CardBody className="group relative  w-auto rounded-xl p-6 flex justify-center items-center">
         <CardItem
           translateZ="100"
           className="w-full mt-4 flex justify-center items-center"
