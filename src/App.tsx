@@ -11,7 +11,7 @@ const sections = ["home", "timeline", "contact"];
 
 const App = () => {
   const [, height] = useWindowSize();
-  const [activeSection, setActiveSection] = useState("home");
+  const [, setActiveSection] = useState("home");
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -59,11 +59,7 @@ const App = () => {
             <a
               key={section}
               href={`#${section}`}
-              className={`cursor-pointer ${
-                activeSection === section
-                  ? "underline underline-offset-8"
-                  : "hover:underline hover:underline-offset-4"
-              }`}
+              className={`cursor-pointer `}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </a>
