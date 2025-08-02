@@ -3,11 +3,12 @@ import mainLogo from "./assets/mainLogo.svg";
 import Contact from "./components/contact/Contact.component";
 import Home from "./components/Home/Home.component";
 import TimeLine from "./components/TimeLineView.component.tsx/TimeLineView.component";
+import Projects from "./components/Projects/Projects.component";
 import { BackgroundBeams } from "./components/ui/BackgroundBeams";
 import { SparklesText } from "./components/ui/SparkleText";
 import useWindowSize from "./hooks/useWindowSize";
 
-const sections = ["home", "timeline", "contact"];
+const sections = ["home", "timeline", "projects", "contact"];
 
 const App = () => {
   const [, height] = useWindowSize();
@@ -56,11 +57,7 @@ const App = () => {
         </SparklesText>
         <div className="text-white flex items-center gap-x-4 text-2xl">
           {sections.map((section) => (
-            <a
-              key={section}
-              href={`#${section}`}
-              className={`cursor-pointer `}
-            >
+            <a key={section} href={`#${section}`} className={`cursor-pointer `}>
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </a>
           ))}
@@ -73,6 +70,9 @@ const App = () => {
       </section>
       <section id="timeline" className="scroll-mt-5">
         <TimeLine />
+      </section>
+      <section id="projects" className="scroll-mt-5">
+        <Projects />
       </section>
       <section id="contact" className="scroll-mt-5">
         <Contact />
