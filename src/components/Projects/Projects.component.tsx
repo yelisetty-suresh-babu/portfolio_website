@@ -160,15 +160,6 @@ const Projects = () => {
                       {project.categories.includes("mobile") && (
                         <MobileOutlined />
                       )}
-                      {project.categories.includes("Web3") && (
-                        <div className="flex items-center justify-center h-[80px]">
-                          <img
-                            src="public/solidity.svg"
-                            alt="Web3"
-                            className="w-12 h-12"
-                          />
-                        </div>
-                      )}
                     </div>
 
                     {/* Category Badge */}
